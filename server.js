@@ -8,13 +8,13 @@ const app = express();
 app.set('view engine', 'ejs')
 // Make sure you place body-parser before your CRUD handlers!
 app.use(bodyParser.urlencoded({ extended: true }))
-const connectionString = 'mongodb+srv://chaudb:abc123456@cluster13.ynbwogf.mongodb.net/?retryWrites=true&w=majority'
+const connectionString = 'mongodb+srv://chautest:abc123456@clustertest.onztxwx.mongodb.net/?retryWrites=true&w=majority'
 // server -> connect -> MongoDB
 MongoClient.connect(connectionString, (err, client) => {
     if (err) return console.error(err)
     console.log('Connected to Database')
     // server -> create -> database -> 'ATNShop' 
-    const db = client.db('ATNShop')
+    const db = client.db('Taphoa')
     // server -> create -> collection -> 'Product'
     const quotesCollection = db.collection('Product')
     // client -> button -> submit -> request -> post -> '/Product' 
