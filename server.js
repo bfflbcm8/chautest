@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser= require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
@@ -22,7 +22,7 @@ MongoClient.connect(connectionString, (err, client) => {
     console.log('Connected to Database')
 
     // server -> create -> database -> 'star-wars-quotes' 
-    const db = client.db('ATNShop')
+    const db = client.db('CuaHang')
 
     // server -> create -> collection -> 'quotes'
     const quotesCollection = db.createCollection('Product')
@@ -35,7 +35,7 @@ MongoClient.connect(connectionString, (err, client) => {
             .then(result => {
                 
                 // server -> result -> console 
-                console.log(result)
+                //console.log(result)
 
                 res.redirect('/')
             })
