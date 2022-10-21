@@ -25,7 +25,7 @@ MongoClient.connect(connectionString, (err, client) => {
     const db = client.db('CuaHang')
 
     // server -> create -> collection -> 'quotes'
-    const quotesCollection = db.createCollection('Product')
+    const quotesCollection = db.collection('Product')
 
     // client -> button -> submit -> request -> post -> '/quotes' 
     app.post('/Product', (req, res) => {
